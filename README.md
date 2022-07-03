@@ -5,6 +5,7 @@ OpenMediaVault plugin to display temperature and control the fan. Based on panq 
 Only tested on TS-453D
 
 Install: dpkg -i omv-panq-plugin.deb
+
 Remove: dpkg -r openmediavault-panq-control
 
 Compile binaries and install using the build-install.sh script.
