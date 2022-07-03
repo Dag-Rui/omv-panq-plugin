@@ -1,0 +1,8 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "system.qnap-control.test"
+  text: _("Test")
+  position: 10
+  icon: "mdi:eye"
+  url: "/system/qnap-control/test"

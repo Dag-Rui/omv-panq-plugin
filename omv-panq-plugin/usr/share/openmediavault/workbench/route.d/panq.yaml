@@ -1,0 +1,6 @@
+version: "1.0"
+type: route
+data:
+  url: "/system/qnap-control"
+  title: _("Qnap Control")
+  component: omv-services-panq-navigation

@@ -1,0 +1,13 @@
+Source: openmediavault-panq-control
+Section: net
+XB-Plugin-Section: filesystems
+Priority: optional
+Maintainer: Goofy dog
+Build-Depends: debhelper (>= 12)
+Standards-Version: 4.3.0
+Homepage: http://omv-extras.org/
+Package: openmediavault-panq-control
+Architecture: all
+Depends: openmediavault (>= 6.0.13)
+Description: temperature and fan control for QNAP devices
+Version: 1.0

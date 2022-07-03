@@ -1,0 +1,22 @@
+version: "1.0"
+type: component
+data:
+  name: omv-services-panq-test
+  type: formPage
+  config:
+    title: Test fan speed
+    request:
+      service: QnapSettings
+      get:
+        method: getFanSpeed
+      post: 
+        method: setFanSpeed
+    fields:
+      - type: numberInput
+        label: _("Set RPM")
+        name: rpm
+        validators:
+          required: true
+    buttons:
+      - template: submit
+        text: _("Set fan speed")

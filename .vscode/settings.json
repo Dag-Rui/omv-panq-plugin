@@ -1,0 +1,11 @@
+{
+  "C_Cpp.errorSquiggles": "Disabled",
+  "files.associations": {
+    "*.inc": "php",
+    "time.h": "c",
+    "stdlib.h": "c",
+    "types.h": "c",
+    "stdio.h": "c",
+    "string.h": "c"
+  }
+}

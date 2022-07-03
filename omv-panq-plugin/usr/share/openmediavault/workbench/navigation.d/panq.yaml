@@ -1,0 +1,8 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "system.qnap-control"
+  text: _("Qnap control")
+  position: 10
+  icon: "mdi:server"
+  url: "/system/qnap-control"

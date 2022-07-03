@@ -1,0 +1,12 @@
+# Contents of /etc/systemd/system/myservice.service
+[Unit]
+Description=Panq fan service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/panq start 15 500 1600 45 90 25 60
+
+[Install]
+WantedBy=multi-user.target

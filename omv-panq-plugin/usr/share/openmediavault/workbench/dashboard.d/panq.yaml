@@ -1,0 +1,32 @@
+version: "1.0"
+type: dashboard-widget
+data:
+  id: 99c5252a-9325-11ec-b199-9f2b33da1123
+  title: _("QNAP overview")
+  description: _("Displays information about the QNAP device.")
+  type: datatable
+  reloadPeriod: 1000
+  permissions:
+    role:
+    - admin
+  datatable:
+    columns:
+    - name: _("Property")
+      prop: prop
+      flexGrow: 1
+      sortable: true
+    - name: _("Data")
+      prop: data
+      flexGrow: 1
+      sortable: true
+    store:
+      proxy:
+        service: QnapControlDashboard
+        get:
+          method: getData
+          params:
+            start: 0
+            limit: -1
+    sorters:
+    - dir: asc
+      prop: priority

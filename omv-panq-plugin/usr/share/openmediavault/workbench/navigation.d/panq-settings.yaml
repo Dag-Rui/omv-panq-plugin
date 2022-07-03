@@ -1,0 +1,8 @@
+version: "1.0"
+type: navigation-item
+data:
+  path: "system.qnap-control.settings"
+  text: _("Settings")
+  position: 10
+  icon: "mdi:cog"
+  url: "/system/qnap-control/settings"

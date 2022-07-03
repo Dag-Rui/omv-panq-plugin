@@ -1,0 +1,7 @@
+version: "1.0"
+type: route
+data:
+  url: "/system/qnap-control/test"
+  title: _("Test")
+  component: omv-services-panq-test
+  editing: true

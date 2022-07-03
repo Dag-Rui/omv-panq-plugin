@@ -1,0 +1,7 @@
+version: "1.0"
+type: route
+data:
+  url: "/system/qnap-control/settings"
+  title: _("Settings")
+  component: omv-services-panq-settings
+  editing: true

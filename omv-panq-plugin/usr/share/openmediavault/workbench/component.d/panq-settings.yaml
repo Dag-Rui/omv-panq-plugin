@@ -1,0 +1,63 @@
+version: "1.0"
+type: component
+data:
+  name: omv-services-panq-settings
+  type: formPage
+  config:
+    title: QNap fan control settings
+    subTitle: Configure the temperature to fan speed (scales linearly). RPM might not be precise for your fan
+    request:
+      service: QnapSettings
+      get:
+        method: getSettings
+      post:
+        method: setSettings
+    fields:
+      - type: checkbox
+        name: enable
+        label: _("Enabled")
+        value: true
+      - type: numberInput
+        label: _("Check interval (seconds)")
+        name: interval
+        validators:
+          required: true
+      - type: container
+        fields:
+        - type: numberInput
+          label: _("Min fan RPM")
+          name: minRpm
+          validators:
+            required: true
+        - type: numberInput
+          label: _("Max fan RPM")
+          name: maxRpm
+          validators:
+            required: true
+      - type: container
+        fields:
+        - type: numberInput
+          label: _("Min CPU temperature (°C)")
+          name: minCpuTemp
+          validators:
+            required: true
+        - type: numberInput
+          label: _("Max CPU temperature (°C)")
+          name: maxCpuTemp
+          validators:
+            required: true
+      - type: container
+        fields:
+        - type: numberInput
+          label: _("Min system temperature (°C)")
+          name: minSystemTemp
+          validators:
+            required: true
+        - type: numberInput
+          label: _("Max system temperature (°C)")
+          name: maxSystemTemp
+          validators:
+            required: true
+    buttons:
+      - template: submit
+        text: _("Save")
