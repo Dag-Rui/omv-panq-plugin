@@ -77,8 +77,8 @@ void service_start(struct ServiceParameters *params)
 
 double calculate_fan_speed(struct ServiceParameters *params, double temperature, double cpu_temperature)
 {
-  double cpu_temp_ratio = (cpu_temperature - params->cpu_temp_low) / (fan_diff);
-  double system_temp_ratio = (temperature - params->temp_low) / (fan_diff);
+  double cpu_temp_ratio = (cpu_temperature - params->cpu_temp_low) / (cpu_temp_diff);
+  double system_temp_ratio = (temperature - params->temp_low) / (system_temp_diff);
 
   double fan_speed_rpm;
 

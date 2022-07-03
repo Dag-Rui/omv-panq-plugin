@@ -90,10 +90,10 @@ int main(int argc, char **argv) {
             .interval = strtod(argv[2], NULL),
             .fan_low_rpm = (u_int32_t) strtoul(argv[3], NULL, 10),
             .fan_high_rpm = (u_int32_t) strtoul(argv[4], NULL, 10),
-            .temp_low = strtod(argv[5], NULL),
-            .temp_high = strtod(argv[6], NULL),
-            .cpu_temp_low = strtod(argv[7], NULL),
-            .cpu_temp_high = strtod(argv[8], NULL)
+            .cpu_temp_low = strtod(argv[5], NULL),
+            .cpu_temp_high = strtod(argv[6], NULL),
+            .temp_low = strtod(argv[7], NULL),
+            .temp_high = strtod(argv[8], NULL)
         };
 
         service_start(&params);

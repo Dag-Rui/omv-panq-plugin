@@ -5,7 +5,7 @@ data:
   title: _("QNAP overview")
   description: _("Displays information about the QNAP device.")
   type: datatable
-  reloadPeriod: 1000
+  reloadPeriod: 3000
   permissions:
     role:
     - admin

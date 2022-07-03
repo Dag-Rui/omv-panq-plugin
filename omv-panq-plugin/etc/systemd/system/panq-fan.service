@@ -6,7 +6,7 @@ After=network.target
 [Service]
 Type=simple
 Restart=always
-ExecStart=/usr/bin/panq start 15 500 1600 45 90 25 60
+ExecStart=/usr/bin/panq start 15 500 1600 45 90 25 50
 
 [Install]
 WantedBy=multi-user.target

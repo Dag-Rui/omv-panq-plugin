@@ -44,6 +44,7 @@ class OMVRpcServiceQnapSettings extends \OMV\Rpc\ServiceAbstract
                     return null;
                 }
                 return [
+                    "enable" => $this->isServiceActive(),
                     "interval" => $tokens[2],
                     "minRpm" => $tokens[3],
                     "maxRpm" => $tokens[4],
@@ -60,6 +61,12 @@ class OMVRpcServiceQnapSettings extends \OMV\Rpc\ServiceAbstract
     {
         $this->validateMethodContext($context, ["role" => OMV_ROLE_ADMINISTRATOR]);
         
+        if ($params["enable"] === false) {
+            $cmd = new \OMV\System\Process("systemctl","stop", "panq-fan");
+            $cmd->execute($output, $exitStatus);
+            return;
+        }
+
         $execCommand = "ExecStart=/usr/bin/panq start " 
             .$params["interval"] . " "
             .$params["minRpm"] . " "
@@ -126,4 +133,13 @@ class OMVRpcServiceQnapSettings extends \OMV\Rpc\ServiceAbstract
         }
     }
 
+    function isServiceActive() {
+        try {
+            $cmd = new \OMV\System\Process("systemctl", "is-active", "panq-fan");
+            $cmd->execute($output, $exitStatus);
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }
