@@ -1,4 +1,4 @@
-# omv-panq-plugin
+# OpenMediaVault QNAP plugin
 
 OpenMediaVault plugin to display temperature and control the fan on QNAP NAS. Based on panq https://github.com/guedou/TS-453Be by guedou
 
